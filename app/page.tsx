@@ -17,7 +17,7 @@ export default function Home() {
     <WhyUs />
     <Process />
     <Portfolio /> 
-    <stats /> 
+    <Stats /> 
  <Services />
   <TrustedBy />
 </main>
