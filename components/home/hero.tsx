@@ -33,7 +33,7 @@ export function Hero() {
 
       {/* 🌟 Background Glow */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-100 blur-3xl opacity-40" />
+        <div className="absolute left-1/2 top-0 h-125 w-125 -translate-x-1/2 rounded-full bg-blue-100 blur-3xl opacity-40" />
       </div>
 
       <Container>

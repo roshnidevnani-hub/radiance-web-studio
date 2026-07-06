@@ -1,32 +1,44 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/sections";
+
+import { FadeIn } from "@/components/shared/fade-in";
 
 export function CTA() {
   return (
     <Section className="py-24">
       <Container>
-        <div className="rounded-[40px] bg-slate-900 px-10 py-20 text-center text-white">
-          <p className="text-blue-400 font-semibold uppercase tracking-widest">
-            Let's Build Something Amazing
-          </p>
+        <FadeIn>
+          <div className="overflow-hidden rounded-3xl bg-slate-900 px-8 py-16 text-center text-white shadow-2xl md:px-16">
 
-          <h2 className="mt-6 text-5xl font-bold">
-            Ready to grow your business online?
-          </h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+              Let's Work Together
+            </p>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-            Whether you're starting from scratch or redesigning an
-            existing website, Radiance Web Studio can help you create
-            a premium online presence.
-          </p>
+            <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">
+              Ready to grow your business online?
+            </h2>
 
-          <div className="mt-10">
-            <Button>
-              Get a Free Consultation
-            </Button>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+              Whether you're launching a new business or upgrading your
+              existing website, we'll create a modern digital experience
+              that helps you attract customers and build trust.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Button>
+                Get a Free Consultation
+              </Button>
+
+              <Button variant="outline">
+                View Portfolio
+              </Button>
+            </div>
+
           </div>
-        </div>
+        </FadeIn>
       </Container>
     </Section>
   );

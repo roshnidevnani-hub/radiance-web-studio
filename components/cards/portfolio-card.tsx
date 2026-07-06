@@ -11,7 +11,7 @@ export function PortfolioCard({
 }: PortfolioCardProps) {
   return (
     <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-blue-100 via-white to-slate-100">
+  <div className="relative h-56 overflow-hidden bg-linear-to-br from-blue-100 via-white to-slate-100">
   <div className="absolute left-6 top-6 h-20 w-32 rounded-xl bg-white shadow-lg"></div>
 
   <div className="absolute right-6 top-10 h-28 w-40 rounded-2xl bg-blue-200"></div>

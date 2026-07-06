@@ -14,7 +14,7 @@ export function ProjectCard({
   return (
     <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
       {/* Project Preview */}
-      <div className="aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+      <div className="aspect-16/10 overflow-hidden bg-linear-to-br from-slate-100 to-slate-200">
         <div className="flex h-full items-center justify-center text-slate-400 text-lg font-medium transition-transform duration-500 group-hover:scale-105">
           Website Preview
         </div>
