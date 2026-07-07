@@ -1,46 +1,80 @@
+import { Mail, Phone, Clock, MapPin } from "lucide-react";
+
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/sections";
-import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
-import { Button } from "@/components/ui/button";
+import { ContactForm } from "./contact-form";
 
 export function ContactSection() {
   return (
     <Section className="py-24">
       <Container>
-        <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-16 lg:grid-cols-2">
 
           {/* Left */}
 
           <div>
-            <p className="mb-4 inline-flex rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
-              Contact Us
+            <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+              Get In Touch
+            </span>
+
+            <h2 className="mt-6 text-4xl font-bold text-slate-900">
+              Let's discuss your next project.
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Whether you need a business website, e-commerce store,
+              landing page, or a complete redesign, we'd love to hear
+              about your project.
             </p>
 
-            <Heading as="h1">
-              Let's build your next website.
-            </Heading>
+            <div className="mt-10 space-y-6">
 
-            <Text className="mt-6">
-              Whether you're launching a new business or upgrading an
-              existing website, we'd love to hear about your project.
-            </Text>
-
-            <div className="mt-10 space-y-6 text-slate-700">
-
-              <div>
-                <h3 className="font-semibold">Email</h3>
-                <p>hello@radiancewebstudio.com</p>
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 text-blue-600" size={22} />
+                <div>
+                  <h3 className="font-semibold text-slate-900">
+                    Email
+                  </h3>
+                  <p className="text-slate-600">
+                    hello@radiancewebstudio.com
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h3 className="font-semibold">Location</h3>
-                <p>Mumbai, India</p>
+              <div className="flex items-start gap-4">
+                <Phone className="mt-1 text-blue-600" size={22} />
+                <div>
+                  <h3 className="font-semibold text-slate-900">
+                    Phone
+                  </h3>
+                  <p className="text-slate-600">
+                    +91 8788115615
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h3 className="font-semibold">Response Time</h3>
-                <p>Usually within 24 hours.</p>
+              <div className="flex items-start gap-4">
+                <Clock className="mt-1 text-blue-600" size={22} />
+                <div>
+                  <h3 className="font-semibold text-slate-900">
+                    Response Time
+                  </h3>
+                  <p className="text-slate-600">
+                    Usually within 24 hours.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <MapPin className="mt-1 text-blue-600" size={22} />
+                <div>
+                  <h3 className="font-semibold text-slate-900">
+                    Location
+                  </h3>
+                  <p className="text-slate-600">
+                    Mumbai, Maharashtra, India
+                  </p>
+                </div>
               </div>
 
             </div>
@@ -48,41 +82,7 @@ export function ContactSection() {
 
           {/* Right */}
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-
-            <form className="space-y-6">
-
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
-              />
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
-              />
-
-              <input
-                type="text"
-                placeholder="Business Name"
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
-              />
-
-              <textarea
-                rows={6}
-                placeholder="Tell us about your project..."
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-600"
-              />
-
-              <Button className="w-full">
-                Send Enquiry
-              </Button>
-
-            </form>
-
-          </div>
+          <ContactForm />
 
         </div>
       </Container>

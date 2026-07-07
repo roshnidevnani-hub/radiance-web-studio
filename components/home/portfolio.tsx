@@ -7,33 +7,47 @@ const projects = [
   {
     title: "Luxury Restaurant",
     category: "Restaurant Website",
+    description:
+      "A premium restaurant website with online reservations, elegant menus, and a mobile-first experience.",
+    technologies: ["Next.js", "Tailwind CSS", "SEO"],
   },
   {
     title: "Modern Medical Clinic",
     category: "Healthcare",
+    description:
+      "Professional healthcare website focused on patient trust, appointment booking, and fast performance.",
+    technologies: ["React", "Performance", "Responsive"],
   },
   {
     title: "Prime Real Estate",
     category: "Real Estate",
+    description:
+      "Modern property showcase designed to generate high-quality enquiries and build credibility.",
+    technologies: ["Next.js", "Lead Generation", "CMS"],
   },
 ];
 
 export function Portfolio() {
   return (
-    <Section id="portfolio" className="py-24">
+    <Section
+      id="portfolio"
+      className="bg-slate-50 py-24"
+    >
       <Container>
         <SectionHeader
           eyebrow="Featured Work"
-          title="Concept websites built with modern design principles."
-          description="These showcase the quality, performance, and user experience we deliver for businesses."
+          title="Beautiful websites built for ambitious businesses."
+          description="Every project focuses on speed, user experience, SEO, and conversions."
         />
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="mt-16 grid gap-10 lg:grid-cols-3">
           {projects.map((project) => (
             <PortfolioCard
               key={project.title}
               title={project.title}
               category={project.category}
+              description={project.description}
+              technologies={project.technologies}
             />
           ))}
         </div>
