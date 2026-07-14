@@ -54,7 +54,14 @@ const services = [
 
 export function Services() {
   return (
-    <Section id="services" className="py-24">
+    <Section
+  id="services"
+  className="relative overflow-hidden py-28"
+>
+  {/* Background Glow */}
+<div className="absolute inset-0 -z-10">
+  <div className="absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-100 blur-3xl opacity-40" />
+</div>
       <Container>
         <SectionHeader
           eyebrow="Our Services"
@@ -62,7 +69,7 @@ export function Services() {
           description="We help businesses create modern websites that build credibility, attract customers, and support long-term growth."
         />
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+     <div className="mt-16 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <ServiceCard
               key={service.title}

@@ -5,19 +5,21 @@ import { useState } from "react";
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
-    setIsSubmitting(true);
+  const form = e.currentTarget; // Save the form reference
 
-    // TODO: Connect to Formspree / Resend later
+  setIsSubmitting(true);
 
-    setTimeout(() => {
-      alert("Thank you! Your enquiry has been received.");
-      setIsSubmitting(false);
-      e.currentTarget.reset();
-    }, 1000);
-  }
+  // TODO: Connect to Resend later
+
+  setTimeout(() => {
+    alert("Thank you! Your enquiry has been received.");
+    setIsSubmitting(false);
+    form.reset(); // Use the saved form instead of e.currentTarget
+  }, 1000);
+}
 
   return (
     <form
