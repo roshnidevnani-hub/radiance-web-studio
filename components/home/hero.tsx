@@ -1,11 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle2,
   Sparkles,
-  Star,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/sections";
 import { Text } from "@/components/ui/text";
+
 import { BrowserMockup } from "./browser-mockup";
 
 function FadeIn({
@@ -37,21 +38,19 @@ function FadeIn({
 }
 
 function Stat({
-  number,
+  icon,
   label,
 }: {
-  number: string;
+  icon: string;
   label: string;
 }) {
   return (
     <motion.div
-      whileHover={{
-        y: -6,
-      }}
-      className="rounded-3xl border border-slate-200 bg-white/80 backdrop-blur-xl p-6 shadow-lg transition"
+      whileHover={{ y: -6 }}
+      className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-lg backdrop-blur-xl transition"
     >
       <h3 className="text-3xl font-black text-blue-600">
-        {number}
+        {icon}
       </h3>
 
       <p className="mt-2 text-sm text-slate-500">
@@ -67,17 +66,14 @@ function TrustItem({
   text: string;
 }) {
   return (
-    <div className="flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-medium">
+    <div className="flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
       <CheckCircle2 className="h-4 w-4 text-green-500" />
       {text}
     </div>
   );
-}
-
-export function Hero() {
+}export function Hero() {
   return (
     <Section className="relative overflow-hidden py-24 lg:py-36">
-
       {/* Background */}
 
       <div className="absolute inset-0 -z-20 bg-white" />
@@ -106,11 +102,10 @@ export function Hero() {
           repeat: Infinity,
           duration: 12,
         }}
-        className="absolute bottom-0 left-0 h-87.5 w-87.5rounded-full bg-cyan-300/20 blur-[120px]"
+        className="absolute bottom-0 left-0 h-87.5 w-87.5 rounded-full bg-cyan-300/20 blur-[120px]"
       />
 
       <Container>
-
         <div className="grid items-center gap-24 lg:grid-cols-2">
 
           {/* LEFT */}
@@ -118,119 +113,108 @@ export function Hero() {
           <div>
 
             <FadeIn>
-
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
-
                 <Sparkles className="h-4 w-4" />
-
-                Premium Web Design Agency
-
+                Modern Web Design Studio
               </div>
-
             </FadeIn>
 
             <FadeIn delay={0.15}>
-
               <Heading
                 as="h1"
                 className="mt-8 text-5xl font-black leading-tight lg:text-7xl"
               >
-
                 Beautiful Websites
 
                 <span className="block bg-linear-to-r from-blue-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent">
-
-                  That Turn Visitors Into Customers
-
+                  Built for Modern Businesses
                 </span>
-
               </Heading>
-
             </FadeIn>
 
             <FadeIn delay={0.3}>
-
               <Text className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-
-                We design lightning-fast, SEO-ready websites that help
-                businesses build trust, generate quality leads and
-                convert visitors into loyal customers.
-
+                We design modern, responsive websites focused on creating
+                a professional online presence, delivering a great user
+                experience, and helping businesses connect with their
+                customers.
               </Text>
-
             </FadeIn>
 
             <FadeIn delay={0.45}>
+              <div className="mt-8 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm">
+                <Sparkles className="mr-2 h-4 w-4 text-blue-600" />
 
-              <div className="mt-8 flex items-center gap-3">
-
-                <div className="flex">
-
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-
-                </div>
-
-                <p className="text-sm text-slate-600">
-
-                  Trusted by startups & growing businesses
-
+                <p className="text-sm font-medium text-slate-700">
+                  Thoughtfully designed with performance, usability and
+                  modern design principles.
                 </p>
-
               </div>
-
             </FadeIn>
 
             <FadeIn delay={0.6}>
-
               <div className="mt-10 flex flex-wrap gap-4">
 
-                <Button className="group">
+                <Link href="/contact">
+                  <Button className="group">
+                    Start Your Project
 
-                  Start Your Project
+                    <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
+                  </Button>
+                </Link>
 
-                  <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
-
-                </Button>
-
-                <Button variant="outline">
-
-                  View Portfolio
-
-                </Button>
+                <Link href="/portfolio">
+                  <Button variant="outline">
+                    View Portfolio
+                  </Button>
+                </Link>
 
               </div>
-
             </FadeIn>
-                        <FadeIn delay={0.75}>
+
+            <FadeIn delay={0.75}>
               <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-4">
-                <Stat number="250+" label="Projects Delivered" />
-                <Stat number="98%" label="Client Satisfaction" />
-                <Stat number="1.5s" label="Avg. Load Time" />
-                <Stat number="24/7" label="Support" />
+
+                <Stat
+                  icon="🎨"
+                  label="Custom Design"
+                />
+
+                <Stat
+                  icon="📱"
+                  label="Mobile Responsive"
+                />
+
+                <Stat
+                  icon="⚡"
+                  label="Performance Focused"
+                />
+
+                <Stat
+                  icon="💻"
+                  label="Modern Technology"
+                />
+
               </div>
             </FadeIn>
 
             <FadeIn delay={0.9}>
               <div className="mt-12 flex flex-wrap gap-3">
-                <TrustItem text="SEO Optimized" />
-                <TrustItem text="Mobile Responsive" />
-                <TrustItem text="Fast Delivery" />
-                <TrustItem text="Modern Design" />
-                <TrustItem text="Secure & Reliable" />
-                <TrustItem text="Ongoing Support" />
+
+                <TrustItem text="Custom Design" />
+                <TrustItem text="Responsive Layout" />
+                <TrustItem text="Performance Focused" />
+                <TrustItem text="Modern Technology" />
+                <TrustItem text="Secure Development" />
+                <TrustItem text="SEO Best Practices" />
+
               </div>
             </FadeIn>
 
           </div>
 
           {/* RIGHT */}
-
-          <FadeIn delay={0.4}>
+                    <FadeIn delay={0.4}>
             <motion.div
               animate={{
                 y: [-10, 10, -10],
@@ -244,28 +228,7 @@ export function Hero() {
             >
               <BrowserMockup />
 
-              {/* Floating Badge 1 */}
-
-              <motion.div
-                animate={{
-                  y: [-8, 8, -8],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                }}
-                className="absolute -left-6 top-10 hidden rounded-2xl border border-white/70 bg-white/90 px-5 py-4 shadow-2xl backdrop-blur-xl xl:block"
-              >
-                <p className="text-2xl font-black text-blue-600">
-                  +187%
-                </p>
-
-                <p className="mt-1 text-sm text-slate-500">
-                  More Leads
-                </p>
-              </motion.div>
-
-              {/* Floating Badge 2 */}
+              {/* Floating Badge */}
 
               <motion.div
                 animate={{
@@ -277,16 +240,16 @@ export function Hero() {
                 }}
                 className="absolute -right-6 bottom-12 hidden rounded-2xl border border-white/70 bg-white/90 px-5 py-4 shadow-2xl backdrop-blur-xl xl:block"
               >
-                <p className="text-2xl font-black text-emerald-600">
-                  95+
+                <p className="text-xl font-black text-emerald-600">
+                  Next.js
                 </p>
 
                 <p className="mt-1 text-sm text-slate-500">
-                  Lighthouse Score
+                  Powered Website
                 </p>
               </motion.div>
 
-              {/* Floating Badge 3 */}
+              {/* Top Badge */}
 
               <motion.div
                 animate={{
@@ -298,15 +261,13 @@ export function Hero() {
                 }}
                 className="absolute right-24 -top-8 hidden rounded-full bg-linear-to-r from-blue-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-xl lg:block"
               >
-                🚀 Fast • Modern • Premium
+                🚀 Modern • Responsive • Professional
               </motion.div>
             </motion.div>
           </FadeIn>
 
         </div>
-
       </Container>
-
     </Section>
   );
 }

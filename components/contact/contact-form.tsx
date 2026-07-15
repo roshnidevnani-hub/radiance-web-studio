@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -196,15 +196,14 @@ setIsSubmitting(false);
   </button>
 
   <a
-    href="https://wa.me/918788115615?text=Hi%20Radiance%20Web%20Studio%2C%0A%0AI%20visited%20your%20website%20and%20I'm%20interested%20in%20getting%20a%20website%20built%20for%20my%20business.%0A%0ACould%20we%20discuss%20my%20project%3F"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-green-500 bg-green-500 px-6 py-4 font-semibold text-white transition hover:bg-green-600"
-  >
-    <MessageCircle size={20} />
-    Chat on WhatsApp
-  </a>
-
+  href="https://wa.me/918788115615?text=Hi%20Radiance%20Web%20Studio%2C%0A%0AI%20visited%20your%20website%20and%20I'm%20interested%20in%20getting%20a%20website%20built%20for%20my%20business.%0A%0ACould%20we%20discuss%20my%20project%3F"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-[#25D366] bg-white px-6 py-4 font-semibold text-[#25D366] transition-all duration-300 hover:bg-[#25D366] hover:text-white"
+>
+  <FaWhatsapp className="h-6 w-6" />
+  <span>Chat on WhatsApp</span>
+</a>
 </div>
     </form>
   );

@@ -35,7 +35,7 @@ export function BrowserMockup() {
           <div className="h-3 w-3 rounded-full bg-green-400" />
 
           <div className="ml-4 flex-1 rounded-full bg-white px-5 py-2 text-xs text-slate-400 shadow-sm">
-            https://radiancewebstudio.com
+            https://radiancewebstudio
           </div>
 
         </div>
@@ -100,18 +100,6 @@ export function BrowserMockup() {
               Modern websites designed for speed, SEO and higher conversions.
             </p>
 
-            <div className="mt-8 flex gap-4">
-
-              <button className="rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg">
-                Get Started
-              </button>
-
-              <button className="rounded-xl border px-6 py-3 text-sm">
-                Portfolio
-              </button>
-
-            </div>
-
           </div>
 
           {/* Analytics */}
@@ -125,17 +113,17 @@ export function BrowserMockup() {
                 <Activity className="text-blue-600" />
 
                 <span className="text-xs font-semibold text-emerald-600">
-                  +28%
+                
                 </span>
 
               </div>
 
               <p className="mt-5 text-3xl font-black">
-                12.4k
+               Layout
               </p>
 
               <p className="mt-2 text-sm text-slate-500">
-                Monthly Visitors
+              Responsive
               </p>
 
             </div>
@@ -147,17 +135,17 @@ export function BrowserMockup() {
                 <BarChart3 className="text-cyan-600" />
 
                 <span className="text-xs font-semibold text-emerald-600">
-                  +19%
+                  
                 </span>
 
               </div>
 
               <p className="mt-5 text-3xl font-black">
-                96%
+               modern
               </p>
 
               <p className="mt-2 text-sm text-slate-500">
-                Lighthouse Score
+             Development
               </p>
 
             </div>
@@ -169,17 +157,17 @@ export function BrowserMockup() {
                 <Globe className="text-indigo-600" />
 
                 <span className="text-xs font-semibold text-emerald-600">
-                  #1
+                  
                 </span>
 
               </div>
 
               <p className="mt-5 text-3xl font-black">
-                SEO
+                Best
               </p>
 
               <p className="mt-2 text-sm text-slate-500">
-                Google Optimized
+                SEO practices
               </p>
 
             </div>
@@ -200,13 +188,13 @@ export function BrowserMockup() {
                   </p>
 
                   <h3 className="mt-2 text-3xl font-bold">
-                    +187% Growth
+                   Performance Focused
                   </h3>
 
                 </div>
 
                 <div className="rounded-2xl bg-emerald-500/20 px-4 py-2 text-sm font-semibold text-emerald-300">
-                  ▲ 24% This Month
+                  ▲ 
                 </div>
 
               </div>
@@ -299,11 +287,11 @@ export function BrowserMockup() {
           <div>
 
             <p className="font-semibold">
-              New Enquiry
+              Contact Form
             </p>
 
             <p className="text-sm text-slate-500">
-              2 minutes ago
+              WhatsApp Ready
             </p>
 
           </div>
@@ -324,7 +312,7 @@ export function BrowserMockup() {
         }}
         className="absolute right-24 -top-6 hidden rounded-full bg-linear-to-r from-blue-600 to-cyan-500 px-5 py-3 text-sm font-semibold text-white shadow-xl xl:block"
       >
-        🚀 Fast • SEO Ready • Premium
+        🚀 Fast • SEO Ready • Professional
       </motion.div>
 
     </motion.div>

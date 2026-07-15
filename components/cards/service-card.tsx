@@ -38,7 +38,7 @@ export function ServiceCard({
           scale: 1.1,
         }}
         transition={{ duration: 0.25 }}
-        className="relative z-10 mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg"
+        className="relative z-10 mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-cyan-500 text-white shadow-lg"
       >
         {icon}
       </motion.div>
@@ -54,14 +54,14 @@ export function ServiceCard({
       </p>
 
       {/* Divider */}
-      <div className="relative z-10 mt-8 h-px bg-gradient-to-r from-slate-200 via-slate-100 to-transparent" />
+      <div className="relative z-10 mt-8 h-px bg-linear-to-r from-slate-200 via-slate-100 to-transparent" />
 
       {/* Bottom Accent */}
       <motion.div
         initial={{ scaleX: 0 }}
         whileHover={{ scaleX: 1 }}
         transition={{ duration: 0.35 }}
-        className="absolute bottom-0 left-0 h-1 w-full origin-left bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-500"
+        className="absolute bottom-0 left-0 h-1 w-full origin-left bg-linear-to-r from-blue-600 via-cyan-500 to-indigo-500"
       />
     </motion.div>
   );

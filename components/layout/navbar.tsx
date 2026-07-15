@@ -45,9 +45,11 @@ export function Navbar() {
 
           {/* Desktop CTA + Mobile Menu Button */}
           <div className="flex items-center gap-3">
-            <div className="hidden md:block">
-              <Button>Get a Quote</Button>
-            </div>
+           <div className="hidden md:block">
+  <Link href="/contact">
+    <Button>Start Your Project</Button>
+  </Link>
+</div>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -74,9 +76,11 @@ export function Navbar() {
                 </Link>
               ))}
 
-              <Button className="mt-2 w-full">
-                Get a Quote
-              </Button>
+              <Link href="/contact" onClick={() => setIsOpen(false)}>
+  <Button className="mt-2 w-full">
+    Start Your Project
+  </Button>
+</Link>
             </nav>
           </div>
         )}

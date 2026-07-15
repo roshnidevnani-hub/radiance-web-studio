@@ -17,21 +17,21 @@ export function AboutHero() {
             </p>
 
             <Heading as="h1">
-              Building premium websites that help businesses grow.
+              Modern websites designed to help businesses build a strong online presence.
             </Heading>
 
             <Text className="mt-6">
-              At Radiance Web Studio, we create fast, modern and
-              SEO-optimized websites that help businesses build trust,
-              generate more enquiries and establish a powerful online
-              presence.
+              Radiance Web Studio is dedicated to creating modern,
+              responsive, and user-focused websites. We believe every
+              business deserves a professional online presence that
+              reflects its brand and helps it connect with customers.
             </Text>
 
             <div className="mt-10 grid grid-cols-2 gap-6 text-slate-700">
-              <div>✓ Premium Design</div>
-              <div>✓ Lightning Fast</div>
-              <div>✓ SEO Optimized</div>
-              <div>✓ Mobile Responsive</div>
+              <div>✓ Modern Design</div>
+              <div>✓ Responsive Layout</div>
+              <div>✓ User-Focused Experience</div>
+              <div>✓ Built for Growth</div>
             </div>
           </div>
 

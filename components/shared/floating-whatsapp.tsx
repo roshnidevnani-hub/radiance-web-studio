@@ -62,7 +62,7 @@ export function FloatingWhatsApp() {
             Let's chat 👋
           </p>
 
-          <div className="absolute right-[-6px] top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-slate-900" />
+          <div className="absolute right-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-slate-900" />
         </div>
 
         {/* Main Button */}
