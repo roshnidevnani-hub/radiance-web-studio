@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/ui/container";
 
 import { Portfolio } from "@/components/home/portfolio";
-import { CTA } from "@/components/home/cta";
+{/*import { CTA } from "@/components/home/cta";*/}
 
 export default function PortfolioPage() {
   return (
@@ -40,7 +40,7 @@ export default function PortfolioPage() {
 
         <Portfolio />
 
-        <CTA />
+        {/* <CTA /> */}
 
       </main>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MessageCircle } from "lucide-react";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -12,13 +13,23 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
   setIsSubmitting(true);
 
-  // TODO: Connect to Resend later
+  // TODO: Connected to the backend API route to send the email using Resend
 
-  setTimeout(() => {
-    alert("Thank you! Your enquiry has been received.");
-    setIsSubmitting(false);
-    form.reset(); // Use the saved form instead of e.currentTarget
-  }, 1000);
+  const formData = new FormData(form);
+
+const response = await fetch("/api/contact", {
+  method: "POST",
+  body: formData,
+});
+
+if (response.ok) {
+  form.reset();
+  alert("Thank you! Your enquiry has been sent.");
+} else {
+  alert("Something went wrong. Please try again.");
+}
+
+setIsSubmitting(false);
 }
 
   return (
@@ -43,7 +54,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
             type="text"
             required
             autoComplete="name"
-            placeholder="John Smith"
+            placeholder=""
             className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-600"
           />
         </div>
@@ -63,7 +74,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
             type="email"
             required
             autoComplete="email"
-            placeholder="john@example.com"
+            placeholder=""
             className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-600"
           />
         </div>
@@ -82,7 +93,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="+91 XXXXX XXXXX"
+            placeholder=""
             className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-blue-600"
           />
         </div>
@@ -174,13 +185,27 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         />
       </div>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="mt-8 w-full rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
-      >
-        {isSubmitting ? "Sending..." : "Send Enquiry"}
-      </button>
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className="flex-1 rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+  >
+    {isSubmitting ? "Sending..." : "Send Enquiry"}
+  </button>
+
+  <a
+    href="https://wa.me/918788115615?text=Hi%20Radiance%20Web%20Studio%2C%0A%0AI%20visited%20your%20website%20and%20I'm%20interested%20in%20getting%20a%20website%20built%20for%20my%20business.%0A%0ACould%20we%20discuss%20my%20project%3F"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-green-500 bg-green-500 px-6 py-4 font-semibold text-white transition hover:bg-green-600"
+  >
+    <MessageCircle size={20} />
+    Chat on WhatsApp
+  </a>
+
+</div>
     </form>
   );
 }

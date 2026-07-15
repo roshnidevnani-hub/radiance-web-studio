@@ -5,7 +5,8 @@ import { Container } from "@/components/ui/container";
 
 import { Services } from "@/components/home/services";
 import { Process } from "@/components/home/process";
-import { CTA } from "@/components/home/cta";
+{/* import { CTA } from "@/components/home/cta"; */}
+
 
 export default function ServicesPage() {
   return (
@@ -44,7 +45,7 @@ export default function ServicesPage() {
 
         <Process />
 
-        <CTA />
+        {/* <CTA /> */}
 
       </main>
 

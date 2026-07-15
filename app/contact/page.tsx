@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/ui/container";
 
 import { ContactSection } from "@/components/contact/contact-section";
-import { CTA } from "@/components/home/cta";
+{/*import { CTA } from "@/components/home/cta";*/}
 
 export default function ContactPage() {
   return (
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
         <ContactSection />
 
-        <CTA />
+        {/* <CTA /> */}
 
       </main>
 

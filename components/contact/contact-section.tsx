@@ -36,7 +36,7 @@ export function ContactSection() {
                     Email
                   </h3>
                   <p className="text-slate-600">
-                    hello@radiancewebstudio.com
+                    radiancewebs@gmail.com
                   </p>
                 </div>
               </div>
