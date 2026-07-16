@@ -1,10 +1,20 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    const contactEmail = process.env.CONTACT_EMAIL;
+
+    if (!apiKey || !contactEmail) {
+      return NextResponse.json(
+        { error: "Server email configuration is missing." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const formData = await request.formData();
 
     const name = formData.get("name")?.toString() ?? "";
@@ -17,7 +27,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: "Radiance Web Studio <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL!,
+      to: contactEmail,
       subject: `New Website Enquiry from ${name}`,
       replyTo: email,
       html: `
