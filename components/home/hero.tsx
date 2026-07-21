@@ -47,9 +47,9 @@ function Stat({
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-lg backdrop-blur-xl transition"
+     className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-lg backdrop-blur-xl transition sm:p-6"
     >
-      <h3 className="text-3xl font-black text-blue-600">
+      <h3 className="text-2xl font-black text-blue-600 sm:text-3xl">
         {icon}
       </h3>
 
@@ -66,14 +66,14 @@ function TrustItem({
   text: string;
 }) {
   return (
-    <div className="flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">
+    <div className="flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-xs font-medium text-slate-700 sm:px-4 sm:text-sm">
       <CheckCircle2 className="h-4 w-4 text-green-500" />
       {text}
     </div>
   );
 }export function Hero() {
   return (
-    <Section className="relative overflow-hidden py-24 lg:py-36">
+<Section className="relative overflow-hidden py-12 lg:py-32">
       {/* Background */}
 
       <div className="absolute inset-0 -z-20 bg-white" />
@@ -106,14 +106,15 @@ function TrustItem({
       />
 
       <Container>
-        <div className="grid items-center gap-24 lg:grid-cols-2">
+        <div className="grid items-center gap-14 lg:grid-cols-2">
 
           {/* LEFT */}
+          <div className="text-center lg:text-left"></div>
 
           <div>
 
             <FadeIn>
-              <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
+              <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700 lg:mx-0">
                 <Sparkles className="h-4 w-4" />
                 Modern Web Design Studio
               </div>
@@ -122,8 +123,7 @@ function TrustItem({
             <FadeIn delay={0.15}>
               <Heading
                 as="h1"
-                className="mt-8 text-5xl font-black leading-tight lg:text-7xl"
-              >
+                className="mt-6 text-[2.15rem] font-black leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl"         >
                 Beautiful Websites
 
                 <span className="block bg-linear-to-r from-blue-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent">
@@ -133,7 +133,7 @@ function TrustItem({
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <Text className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
+              <Text className="mx-auto mt-5 max-w-md text-[15px] leading-7 text-slate-600 sm:max-w-xl sm:text-lg sm:leading-8 lg:mx-0">
                 We design modern, responsive websites focused on creating
                 a professional online presence, delivering a great user
                 experience, and helping businesses connect with their
@@ -142,7 +142,7 @@ function TrustItem({
             </FadeIn>
 
             <FadeIn delay={0.45}>
-              <div className="mt-8 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm">
+              <div className="mx-auto mt-8 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm lg:mx-0">
                 <Sparkles className="mr-2 h-4 w-4 text-blue-600" />
 
                 <p className="text-sm font-medium text-slate-700">
@@ -153,27 +153,27 @@ function TrustItem({
             </FadeIn>
 
             <FadeIn delay={0.6}>
-              <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+  <Link href="/contact" className="w-full sm:w-auto">
+    <Button className="group h-12 w-full rounded-2xl text-base font-semibold sm:w-auto sm:px-6">
+      Start Your Project
+      <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
+    </Button>
+  </Link>
 
-                <Link href="/contact">
-                  <Button className="group">
-                    Start Your Project
-
-                    <ArrowRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-
-                <Link href="/portfolio">
-                  <Button variant="outline">
-                    View Portfolio
-                  </Button>
-                </Link>
-
-              </div>
+  <Link href="/portfolio" className="w-full sm:w-auto">
+    <Button
+      variant="outline"
+      className="h-12 w-full rounded-2xl text-base font-semibold sm:w-auto sm:px-6"
+    >
+      View Portfolio
+    </Button>
+  </Link>
+</div>
             </FadeIn>
 
             <FadeIn delay={0.75}>
-              <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-4">
+              <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 sm:grid-cols-4">
 
                 <Stat
                   icon="🎨"
@@ -199,7 +199,7 @@ function TrustItem({
             </FadeIn>
 
             <FadeIn delay={0.9}>
-              <div className="mt-12 flex flex-wrap gap-3">
+              <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
 
                 <TrustItem text="Custom Design" />
                 <TrustItem text="Responsive Layout" />
@@ -226,7 +226,9 @@ function TrustItem({
               }}
               className="relative"
             >
-              <BrowserMockup />
+            <div className="mx-auto max-w-75 sm:max-w-sm lg:max-w-none">
+  <BrowserMockup />
+</div>
 
               {/* Floating Badge */}
 
