@@ -13,7 +13,6 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/sections";
 import { Text } from "@/components/ui/text";
-
 import { BrowserMockup } from "./browser-mockup";
 
 function FadeIn({
@@ -106,12 +105,12 @@ function TrustItem({
       />
 
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-2">
+       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
           {/* LEFT */}
-          <div className="text-center lg:text-left"></div>
+          
 
-          <div>
+                   <div className="order-1 w-full text-center lg:text-left">
 
             <FadeIn>
               <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700 lg:mx-0">
@@ -224,9 +223,8 @@ function TrustItem({
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="relative"
-            >
-            <div className="mx-auto max-w-75 sm:max-w-sm lg:max-w-none">
+                         className="relative order-2 w-full lg:order-2"
+            ><div className="mx-auto w-full max-w-[320px] sm:max-w-md lg:max-w-155">
   <BrowserMockup />
 </div>
 
